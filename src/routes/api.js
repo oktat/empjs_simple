@@ -5,8 +5,13 @@ const EmployeeController = require('../controllers/employeecontroller')
 const AuthController = require('../controllers/authcontroller')
 const { verifyToken } = require('../middleware/authjwt');
 
-router.get('/employees', EmployeeController.index)
+/*
+Example for auth:
 router.post('/employees', [verifyToken], EmployeeController.store)
+*/
+
+router.get('/employees', EmployeeController.index)
+router.post('/employees', EmployeeController.store)
 router.put('/employees/:id', EmployeeController.update)
 router.delete('/employees/:id', EmployeeController.destroy)
 

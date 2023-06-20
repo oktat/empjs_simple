@@ -7,7 +7,8 @@ const sequalize = new Sequalize(
     process.env.DB_PASS,
     {
         host: process.env.DB_HOST,
-        dialect: 'mariadb',
+        dialect: process.env.DB_DIALECT,
+        storage: process.env.DB_PATH,
         dialectOptions: {}
     }
 )

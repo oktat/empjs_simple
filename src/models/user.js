@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize')
-const sequelize = require('../database/mariadb')
+const sequelize = require('../database/database')
  
 const User = sequelize.define('User', {
     id: { 
