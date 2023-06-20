@@ -7,7 +7,13 @@ const Employee = sequelize.define('Employee', {
         autoIncrement: true,
         primaryKey: true
     },
-    name: { type: DataTypes.STRING,  allowNull: false  },
+    name: { 
+        type: DataTypes.STRING,  
+        allowNull: false,
+        validate: {
+            notNull: true
+        }
+    },
     city: { type: DataTypes.STRING,  allowNull: true  },
     salary: { type: DataTypes.DOUBLE , defaultValue: 0 }
 })

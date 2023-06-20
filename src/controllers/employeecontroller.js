@@ -116,14 +116,14 @@ const EmployeeController = {
     },
     async tryDestroy(req, res) {
         const id = req.params.id
-        const emp = await Employee.destroy({
+        const item = await Employee.destroy({
             where: {id: id}
         })
         await res.status(200)
         await res.json({
             success: true,
             message: 'Ok. Delete is true',
-            data: emp
+            data: item
         })
     }
 }
